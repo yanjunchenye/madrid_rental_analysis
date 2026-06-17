@@ -1,0 +1,43 @@
+{
+  "total": 3,
+  "totalPages": 1,
+  "actualPage": 1,
+  "itemsPerPage": 50,
+  "paginable": true,
+  "hiddenResults": false,
+  "elementList": [
+    {
+      "propertyCode": "98765432",
+      "price": 1200.0,
+      "operation": "rent",
+      "size": 65.0,
+      "rooms": 2,
+      "bathrooms": 1,
+      "neighborhood": "Embajadores-Lavapiés",
+      "district": "Centro",
+      "url": "https://www.idealista.com/inmueble/98765432/"
+    },
+    {
+      "propertyCode": "98765433",
+      "price": 950.0,
+      "operation": "rent",
+      "size": 48.0,
+      "rooms": 1,
+      "bathrooms": 1,
+      "neighborhood": "Universidad-Malasaña",
+      "district": "Centro",
+      "url": "https://www.idealista.com/inmueble/98765433/"
+    },
+    {
+      "propertyCode": "98765434",
+      "price": 1800.0,
+      "operation": "rent",
+      "size": 95.0,
+      "rooms": 3,
+      "bathrooms": 2,
+      "neighborhood": "Recoletos",
+      "district": "Salamanca",
+      "url": "https://www.idealista.com/inmueble/98765434/"
+    }
+  ]
+}
