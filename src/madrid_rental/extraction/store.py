@@ -2,18 +2,23 @@ from sqlalchemy import text
 from madrid_rental.database.connection import get_engine
 
 def get_or_create_barrio(conn, nombre):
+    """Get the id of a neighbourhood, creating it if it doesn't exist.
 
-    #a ver si el barrio ya existe
+    - If neighbourhood exists, return its id
+    - If not, create it and return the new id
+    """
+
+    #check if exists
     resultado = conn.execute(
         text("SELECT id FROM barrios WHERE nombre = :nombre"),
         {"nombre": nombre}
     ).fetchone()
 
-    #si existe, devolver id
+    #if exists
     if resultado is not None:
         return resultado[0]
     
-    #si no, crearlo y devolver nuevo id
+    #if it doesn't
     nuevo = conn.execute(
         text("INSERT INTO barrios (nombre) VALUES (:nombre) RETURNING id"),
         {"nombre": nombre}
@@ -22,6 +27,13 @@ def get_or_create_barrio(conn, nombre):
 
 
 def save_anuncios(anuncios):
+    """Save or update listings in the database.
+
+    - If the listing is new: insert it into the database and record its price in the price history.
+    - If it already exists but the price has changed: update the price and record the change in the price history.
+    - If it already exists and the price is the same: leave it unchanged.
+    """
+
     engine = get_engine()
     with engine.begin() as conn:
         for a in anuncios:

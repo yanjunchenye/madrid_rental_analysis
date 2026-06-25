@@ -1,0 +1,13 @@
+pyproject.toml
+src/madrid_rental/__init__.py
+src/madrid_rental/config.py
+src/madrid_rental/database/__init__.py
+src/madrid_rental/database/connection.py
+src/madrid_rental/database/init_db.py
+src/madrid_rental/extraction/__init__.py
+src/madrid_rental/extraction/idealista_client.py
+src/madrid_rental/extraction/store.py
+src/madrid_rental_analysis.egg-info/PKG-INFO
+src/madrid_rental_analysis.egg-info/SOURCES.txt
+src/madrid_rental_analysis.egg-info/dependency_links.txt
+src/madrid_rental_analysis.egg-info/top_level.txt
